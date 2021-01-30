@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zampaleupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zampaleupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: zampaleupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: zampaleupipelinesjavascriptdocker 
+          image: opensolab.azurecr.io/zampaleupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
